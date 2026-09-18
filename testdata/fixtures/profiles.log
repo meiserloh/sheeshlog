@@ -1,0 +1,3 @@
+{"ts":"2026-08-21T05:03:12Z","level":"info","msg":"reconciling","name":"backup-1","Backup":{"name":"backup-nested","ns":"production"},"detail":"first detail"}
+{"ts":"2026-08-21T05:03:13Z","level":"warn","msg":"nested path lands on a string","name":"backup-2","Backup":"not-an-object","detail":"second detail"}
+{"ts":"2026-08-21T05:03:14Z","level":"error","msg":"no subject candidate present","detail":"third detail"}

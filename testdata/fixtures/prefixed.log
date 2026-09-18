@@ -1,0 +1,9 @@
+[pod/operator-abc/manager] {"ts":"2026-08-21T05:03:12Z","level":"info","msg":"reconciling","name":"backup-1"}
+{"ts":"2026-08-21T05:03:13Z","level":"info","msg":"unprefixed still renders"}
+
+[pod/operator-abc/manager] panic: runtime error: invalid memory address or nil pointer dereference
+[pod/operator-abc/manager] goroutine 42 [running]:
+[pod/operator-abc/manager] main.reconcile(0xc000123456, map[string]string{"a":"b"})
+[pod/operator-abc/manager] 	/src/main.go:88 +0x1a4
+
+[pod/operator-abc/manager] {"ts":"2026-08-21T05:03:14Z","level":"error","msg":"backup failed","err":"boom"}

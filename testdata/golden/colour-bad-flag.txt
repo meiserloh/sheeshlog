@@ -1,0 +1,4 @@
+--- stderr ---
+sheesh: --color: unknown value "loud" (want auto, always or never)
+--- exit ---
+2

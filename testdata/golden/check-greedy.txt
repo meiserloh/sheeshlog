@@ -1,0 +1,33 @@
+profile greedy, threshold info
+sample 6 lines: 1 passed through, 5 noise, 0 below info, 0 rendered
+nothing rendered through the profile: every line was dropped or passed through
+
+slots (of 0 lines reaching them)
+  time     ts 0
+  level    level 0
+  message  msg 0
+  subject  (no path declared)
+
+noise dropped
+  msg  a  5
+
+context suppressed (of the same 0 lines)
+  (no fields)
+
+fields seen (of 5 lines parsed)
+  Backup           2
+  Restore          1
+  _prefix          5
+  controller       2
+  controllerGroup  1
+  controllerKind   2
+  duration         1
+  error            1
+  level            5
+  logger           1
+  msg              5
+  name             1
+  namespace        1
+  reconcileID      1
+  source           1
+  ts               5

@@ -1,0 +1,22 @@
+2026-09-02T11:11:07Z DBG log/log.go:244 > http: TLS handshake error from 203.0.113.4:56789: tls: client offered only unsupported versions: [301]
+2026-09-02T11:11:10Z DBG github.com/traefik/traefik/v3/pkg/provider/kubernetes/crd/kubernetes.go:130 > Skipping Kubernetes event kind *v1.ConfigMap providerName=kubernetescrd
+2026-09-02T11:21:03.616999+00:00 postfix postfix/smtpd[287[]: NOQUEUE: lost connection after CONNECT from unknown[192.0.2.6]
+2026-09-02T11:21:03.617019+00:00 postfix postfix/smtpd[287[]: disconnect from unknown[192.0.2.6] commands=0/0
+manager 198.51.100.21 - - [02/Sep/2026:06:35:33 +0000] "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 3517 "-" "libredtail-http" "203.0.113.4"
+manager 2026/09/02 06:35:33 [error] 8#0: *4 open() "/etc/nginx/html/testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php" failed (2: No such file or directory), client: 198.51.100.21, server: , request: "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1", host: "203.0.113.4:443"
+scm 07:18:38.145 [main] INFO sonia.scm.lifecycle.classloading.ClassLoaderLifeCycle -- create new simple ClassLoaderLifeCycle
+postgresql 2026-09-02 07:17:58.824 CEST [1] LOG:  starting PostgreSQL 14.23 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+redmine Configuration admin received a new password.
+redmine Starting redmine in background...
+cas 2026-09-02 07:20:33,896 WARN [org.apereo.cas.util.cipher.BaseBinaryCipherExecutor[] - <Generated encryption key [REDACTEDKEYREDACTEDKEY[] of size [16]. The generated key MUST be added to CAS settings:
+cas 
+cas     cas.webflow.crypto.encryption.key=REDACTEDKEYREDACTEDKEY
+cas 
+cas >
+2026-09-02T05:16:47Z    INFO    starting server    {"name": "health probe", "addr": "[::]:8081"}
+2026-09-02T05:16:47Z    INFO    controller-runtime.metrics    Serving metrics server    {"bindAddress": "127.0.0.1:8080", "secure": false}
+2026-09-02T05:16:47Z    INFO    Starting EventSource    {"controller": "debugmode", "controllerGroup": "example.com", "controllerKind": "DebugMode", "source": "kind source: *v1.DebugMode"}
+2026-09-02T05:16:47Z    INFO    Starting workers    {"controller": "debugmode", "controllerGroup": "example.com", "controllerKind": "DebugMode", "worker count": 1}
+I0902 05:16:55.730968       1 wrapper.go:151] "Starting kube-state-metrics"
+I0902 05:16:55.744117       1 server.go:288] "Using annotations allowlist" annotationsAllowList={}
+I0902 05:16:55.744147       1 server.go:293] "Using labels allowlist" labelsAllowList={}

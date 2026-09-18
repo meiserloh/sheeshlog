@@ -1,0 +1,4 @@
+--- stderr ---
+sheesh: flag provided but not defined: -nope
+--- exit ---
+2

@@ -1,0 +1,4 @@
+05:03:12 D backup-20260821-0503  reconciling backup
+05:03:44 I backup-20260821-0503  backup completed  duration=31.8s
+05:04:02 E restore-20260821-0504  restore failed  error=velero: timeout waiting for volume
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 default-schedule-cr CR 'nightly-schedule' already exists, skipping creation

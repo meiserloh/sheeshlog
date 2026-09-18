@@ -1,0 +1,9 @@
+05:03:12 I [pod/operator-abc/manager]  reconciling  name=backup-1
+05:03:13 I -  unprefixed still renders
+
+[pod/operator-abc/manager] panic: runtime error: invalid memory address or nil pointer dereference
+[pod/operator-abc/manager] goroutine 42 [running]:
+[pod/operator-abc/manager] main.reconcile(0xc000123456, map[string]string{"a":"b"})
+[pod/operator-abc/manager] 	/src/main.go:88 +0x1a4
+
+05:03:14 E [pod/operator-abc/manager]  backup failed  err=boom

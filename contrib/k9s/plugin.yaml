@@ -1,0 +1,81 @@
+# sheesh in k9s: read the selected pod's logs already rendered by the profile
+# named after its workload.
+#
+# Install by merging these entries into ~/.config/k9s/plugins.yaml (k9s reads
+# one file, so a second `plugins:` key would replace the first rather than add
+# to it).
+#
+# Needs `sheesh` and `ov` (https://github.com/noborus/ov) on PATH. ov is a
+# dependency rather than a nicety: less cannot do this. In its follow mode less
+# blocks reading the pipe and never sees a keystroke, so leaving it costs a ^C
+# before the q — and ov, being an event loop, takes q while still following.
+# A machine without ov gets a shortcut that does nothing rather than one that
+# degrades, so install it everywhere the plugin is installed.
+#
+# The two entries exist because the two views name the pod differently: in the
+# pod view the selected row is $NAME, while in the container view $NAME is the
+# container and the pod is $POD. They share one shortcut, which is unambiguous
+# because their scopes are disjoint.
+#
+# Shift-Z is chosen for being unclaimed by k9s in these views — the letter means
+# nothing, it is simply free. If it clashes with something in your setup, change
+# both entries; a clash is resolved in favour of k9s's own binding, so the
+# symptom is a key that does nothing.
+#
+# Keys once inside: q returns to k9s, / searches, F toggles following the tail.
+plugins:
+  sheesh-logs:
+    shortCut: Shift-Z
+    description: Logs (sheesh)
+    scopes:
+      - pods
+    command: bash
+    background: false
+    confirm: false
+    args:
+      - -c
+      # ov runs the pipeline rather than sitting at the end of one. A shell
+      # waits for every member of a pipeline before it returns, so with ov last
+      # a quit would leave the shell blocked on a kubectl that is still
+      # following, and k9s would not come back until the whole group was
+      # interrupted. As the parent, ov is the only child to wait for.
+      #
+      # --level trace to not cut any logs that are decisively put on for example debug.
+      #
+      # --color always because the output goes straight to the terminal k9s
+      # hands over, which sheesh's own auto-detection cannot always see through.
+      #
+      # Both 2>&1 keep the stream and its explanations together: ov paints over
+      # the screen, so a kubectl error or sheesh's "no profile for pod" note
+      # would otherwise be written behind it and never read.
+      #
+      # --profile-for-pod resolves the profile from the pod name and ignores the
+      # remembered one, so this is safe to press on any pod: with no profile
+      # installed for the workload it shows the raw stream and says so, rather
+      # than reinterpreting it with whatever was last used.
+      - >-
+        exec ov --follow-mode --exec -- sh -c
+        'kubectl logs --context "$CONTEXT" --namespace "$NAMESPACE"
+        --tail 200 --follow "$NAME" 2>&1
+        | sheesh --level trace --color always --profile-for-pod "$NAME" 2>&1'
+
+  sheesh-logs-container:
+    shortCut: Shift-Z
+    description: Logs (sheesh)
+    scopes:
+      - containers
+    command: bash
+    background: false
+    confirm: false
+    args:
+      - -c
+      # The profile is resolved from the pod, not from the container: a profile
+      # is named after the workload, and every container in the pod belongs to
+      # the same one. A sidecar logging in a different style is read with the
+      # workload's profile, which is a known limitation rather than an
+      # oversight — see the note in docs/writing-a-profile.md.
+      - >-
+        exec ov --follow-mode --exec -- sh -c
+        'kubectl logs --context "$CONTEXT" --namespace "$NAMESPACE"
+        --tail 200 --follow "$POD" --container "$NAME" 2>&1
+        | sheesh --level trace --color always --profile-for-pod "$POD" 2>&1'

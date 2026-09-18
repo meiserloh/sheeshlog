@@ -1,0 +1,4 @@
+{"ts":1755750192,"level":"info","msg":"epoch seconds as a number"}
+{"ts":"1755750224","level":"info","msg":"epoch seconds as a string"}
+{"ts":1755750244.75,"level":"info","msg":"a fractional second is truncated to the second"}
+{"ts":"not a time","level":"warn","msg":"an unreadable time leaves the slot empty and survives as an extra"}

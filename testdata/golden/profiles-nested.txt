@@ -1,0 +1,3 @@
+05:03:12 I backup-nested  first detail  msg=reconciling name=backup-1
+05:03:13 W backup-2  second detail  Backup=not-an-object msg=nested path lands on a string
+05:03:14 E -  third detail  msg=no subject candidate present

@@ -1,0 +1,10 @@
+velero-plugin-for-gcp Copying /plugins/velero-plugin-for-gcp to /target/velero-plugin-for-gcp ...  done.
+stream closed: EOF for production/velero-5474788c94-t29rg (velero-plugin-for-gcp)
+velero time="2026-09-02T11:00:44Z" level=info msg="Validating BackupStorageLocation" backup-storage-location=production/default controller=backup-storage-location logSource="pkg/controller/backup_storage_location_controller.go:252"
+velero time="2026-09-02T11:00:44Z" level=info msg="plugin process exited" backup-storage-location=production/default cmd=/plugins/velero-plugin-for-gcp controller=backup-storage-location id=3342 logSource="pkg/plugin/clientmgmt/process/logrus_adapter.go:80" plugin=/plugins/velero-plugin-for-gcp
+prometheus time=2026-09-02T05:17:38.812Z level=INFO source=main.go:1724 msg="updated GOGC" old=100 new=75
+prometheus time=2026-09-02T05:17:38.813Z level=INFO source=main.go:789 msg="Leaving GOMAXPROCS=4: CPU quota undefined" component=automaxprocs
+time="2026-09-02T08:52:50Z" level=info msg="checking app dependency cas:>=7.0.5.1-6" App="{\"name\":\"redmine\",\"namespace\":\"production\"}" controller=app controllerGroup=example.com controllerKind=App name=redmine namespace=production reconcileID="\"e3e93be5-997b-4c16-ad28-46d95e057d92\""
+time="2026-09-02T08:52:50Z" level=info msg="skipping legacy app dependency: nginx" App="{\"name\":\"redmine\",\"namespace\":\"production\"}" controller=app name=redmine namespace=production
+time="2026-09-02T09:06:07Z" level=info msg="[helm-client] Patch Service \"my-backup-operator-controller-manager-metrics-service\" in namespace production"
+velero time="2026-09-02T11:00:45Z" level=info msg="unterminated quote controller=backup-sync

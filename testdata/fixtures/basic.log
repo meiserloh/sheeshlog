@@ -1,0 +1,6 @@
+{"ts":"2026-08-21T05:03:12.123456Z","level":"info","msg":"reconciling","name":"backup-1","attempt":2}
+{"ts":"2026-08-21T05:03:12.500000Z","level":"error","msg":"backup failed","err":"boom","duration":1.5}
+{"ts":"2026-08-21T05:03:13Z","msg":"no level here"}
+{"ts":"2026-08-21T05:03:14Z","level":"debug","msg":"nested","Backup":{"name":"backup-1","ns":"production"}}
+not json at all
+{"ts":"2026-08-21T05:03:15Z","level":"warn","msg":"only slots"}

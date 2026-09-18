@@ -1,0 +1,9 @@
+{"ts":"2026-08-21T05:03:10Z","level":"trace","msg":"entering reconcile"}
+{"ts":"2026-08-21T05:03:11Z","level":"debug","msg":"cache hit"}
+{"ts":"2026-08-21T05:03:12Z","level":"info","msg":"reconciling"}
+{"ts":"2026-08-21T05:03:13Z","level":"WARN","msg":"retrying"}
+{"ts":"2026-08-21T05:03:14Z","level":"Warning","msg":"still retrying"}
+{"ts":"2026-08-21T05:03:15Z","level":"error","msg":"backup failed"}
+{"ts":"2026-08-21T05:03:16Z","msg":"no level here"}
+{"ts":"2026-08-21T05:03:17Z","level":"fatal","msg":"unrecognised level"}
+panic: runtime error: invalid memory address

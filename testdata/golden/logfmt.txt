@@ -1,0 +1,10 @@
+velero-plugin-for-gcp Copying /plugins/velero-plugin-for-gcp to /target/velero-plugin-for-gcp ...  done.
+stream closed: EOF for production/velero-5474788c94-t29rg (velero-plugin-for-gcp)
+11:00:44 I velero  Validating BackupStorageLocation  backup-storage-location=production/default
+11:00:44 I velero  plugin process exited  backup-storage-location=production/default cmd=/plugins/velero-plugin-for-gcp id=3342 plugin=/plugins/velero-plugin-for-gcp
+05:17:38.812 I prometheus  updated GOGC  new=75 old=100
+05:17:38.813 I prometheus  Leaving GOMAXPROCS=4: CPU quota undefined  component=automaxprocs
+08:52:50 I redmine  checking app dependency cas:>=7.0.5.1-6
+08:52:50 I redmine  skipping legacy app dependency: nginx
+09:06:07 I -  [helm-client] Patch Service "my-backup-operator-controller-manager-metrics-service" in namespace production
+velero time="2026-09-02T11:00:45Z" level=info msg="unterminated quote controller=backup-sync

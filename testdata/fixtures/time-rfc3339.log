@@ -1,0 +1,5 @@
+{"ts":"2026-08-21T05:03:12Z","level":"info","msg":"reconciling backup"}
+{"ts":"2026-08-21T05:03:12.480391Z","level":"info","msg":"fraction is kept as written"}
+{"ts":"2026-08-21T07:03:12+02:00","level":"info","msg":"offset is kept as written"}
+{"ts":"2026-08-21T05:03:44","level":"info","msg":"a zoneless timestamp still reads"}
+{"ts":"STARTED","level":"warn","msg":"an unreadable time leaves the slot empty and survives as an extra"}

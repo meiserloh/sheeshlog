@@ -1,0 +1,4 @@
+04:23:12 I -  epoch seconds as a number
+04:23:44 I -  epoch seconds as a string
+04:24:04 I -  a fractional second is truncated to the second
+ W -  an unreadable time leaves the slot empty and survives as an extra  ts=not a time

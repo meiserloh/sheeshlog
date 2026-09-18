@@ -1,0 +1,2 @@
+04:23:12 I -  a value detection reads as seconds
+04:23:44 I -  the profile says these are milliseconds

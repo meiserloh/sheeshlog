@@ -1,0 +1,4 @@
+--- stderr ---
+sheesh: --level: unknown level "loud" (want trace, debug, info, warn or error)
+--- exit ---
+2

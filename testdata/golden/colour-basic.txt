@@ -1,0 +1,6 @@
+05:03:12.123456 [32mI[0m [36m-[0m  reconciling  [90mattempt=2 name=backup-1[0m
+05:03:12.500000 [31mE[0m [36m-[0m  backup failed  [90mduration=1.5 err=boom[0m
+05:03:13 [32mI[0m [36m-[0m  no level here
+05:03:14 [90mD[0m [36m-[0m  nested  [90mBackup={"name":"backup-1","ns":"production"}[0m
+not json at all
+05:03:15 [33mW[0m [36m-[0m  only slots

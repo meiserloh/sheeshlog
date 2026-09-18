@@ -1,0 +1,32 @@
+profile typo, threshold info
+sample 6 lines: 1 passed through, 0 noise, 1 below info, 4 rendered
+
+slots (of 5 lines reaching them)
+  time     ts 5
+  level    level 5
+  message  message 0       (5 empty)
+  subject  Backup.title 0  (5 empty)
+
+noise dropped
+  (no rules)
+
+context suppressed (of the same 5 lines)
+  (no fields)
+
+fields seen (of 5 lines parsed)
+  Backup           2
+  Restore          1
+  _prefix          5
+  controller       2
+  controllerGroup  1
+  controllerKind   2
+  duration         1
+  error            1
+  level            5
+  logger           1
+  msg              5
+  name             1
+  namespace        1
+  reconcileID      1
+  source           1
+  ts               5

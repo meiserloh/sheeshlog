@@ -28,5 +28,20 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
+.idea/
 # .vscode/
+
+# Local agent scaffolding: the agent instructions, their conventions and the
+# per-project Claude settings. The issue tracker itself now lives outside the
+# repository entirely, in ~/agentNotes/sheeshlog/.
+.scratch/
+/CLAUDE.md
+/docs/agents/
+/.claude/
+
+# ignore the og script
+oplog
+
+# Throwaway demo log for the README screenshot. Regenerate it rather than
+# commit it: it is a prop, not a fixture, and nothing tests against it.
+/demo.log

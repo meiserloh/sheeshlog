@@ -1,0 +1,5 @@
+04:58:04 I -  Starting EventSource  controller=backup
+04:58:05 W -  metrics server is starting to listen  logger=controller-runtime.metrics
+04:58:06 E manager  Shutdown signal received
+05:03:12 I backup-1  reconciling backup
+05:03:44 I backup-1  backup completed  duration=31.8s

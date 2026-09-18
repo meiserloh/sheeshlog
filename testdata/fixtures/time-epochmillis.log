@@ -1,0 +1,5 @@
+{"ts":1755750192123,"level":"info","msg":"epoch millis as a number"}
+{"ts":"1755750224480","level":"info","msg":"epoch millis as a string"}
+{"ts":1755750224481,"level":"info","msg":"millis are kept, so two events in one second stay ordered"}
+{"ts":1755750192123456,"level":"warn","msg":"microseconds are not guessed at"}
+{"ts":true,"level":"warn","msg":"an unreadable time leaves the slot empty and survives as an extra"}

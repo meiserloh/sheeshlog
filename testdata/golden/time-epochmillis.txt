@@ -1,0 +1,5 @@
+04:23:12.123 I -  epoch millis as a number
+04:23:44.480 I -  epoch millis as a string
+04:23:44.481 I -  millis are kept, so two events in one second stay ordered
+ W -  microseconds are not guessed at  ts=1755750192123456
+ W -  an unreadable time leaves the slot empty and survives as an extra  ts=true

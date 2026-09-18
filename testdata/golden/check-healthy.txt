@@ -1,0 +1,41 @@
+profile operator, threshold info
+sample 6 lines: 1 passed through, 2 noise, 1 below info, 2 rendered
+
+slots (of 3 lines reaching them)
+  time     ts 3
+  level    level 3
+  message  msg 3
+  subject  name 1, Backup.name 1, Restore.name 1, BackupSchedule.name 0
+
+noise dropped
+  msg     ^(Starting|Serving|Stopping|Shutdown|starting server|Wait completed)  2
+  logger  ^controller-runtime                                                   0
+
+context suppressed (of the same 3 lines)
+  logger           0
+  controller       1
+  controllerGroup  0
+  controllerKind   1
+  reconcileID      1
+  namespace        1
+  Backup           2
+  Restore          1
+  BackupSchedule   0
+
+fields seen (of 5 lines parsed)
+  Backup           2
+  Restore          1
+  _prefix          5
+  controller       2
+  controllerGroup  1
+  controllerKind   2
+  duration         1
+  error            1
+  level            5
+  logger           1
+  msg              5
+  name             1
+  namespace        1
+  reconcileID      1
+  source           1
+  ts               5

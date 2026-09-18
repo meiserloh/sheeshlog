@@ -1,0 +1,10 @@
+04:58:04 I -  Starting in development mode! This is not recommended for production!
+04:58:04 I -  reading backup operator image to use from ConfigMap  configMap=my-backup-operator-additional-images key=operatorImage
+04:58:04 I -  Serving metrics server  bindAddress=:8080 secure=false
+04:57:31 I -  using retention strategy "keepAll" to delete backups
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 default-schedule-cr CR 'nightly-schedule' already exists, skipping creation
+04:58:04 I -  Starting workers  worker count=1
+04:58:04 D nightly-schedule  starting BackupSchedule reconciliation
+04:58:04 I restore-20260820-0921  found restore resource production/restore-20260820-0921
+04:58:04 D backup-20260820-0916  ensureProviderBackupDeleted: backup is not deleted -> mark backup as not deleting, NEXT
+04:58:04 I nightly-schedule  synchronized CronJob  cronJob=backup-schedule-nightly-schedule operation=updated

@@ -1,0 +1,5 @@
+{"ts":"2026-08-21T04:58:04Z","level":"info","msg":"Starting EventSource","controller":"backup"}
+{"ts":"2026-08-21T04:58:05Z","level":"warn","logger":"controller-runtime.metrics","msg":"metrics server is starting to listen"}
+{"ts":"2026-08-21T04:58:06Z","level":"error","msg":"Shutdown signal received","name":"manager"}
+{"ts":"2026-08-21T05:03:12Z","level":"info","msg":"reconciling backup","name":"backup-1"}
+{"ts":"2026-08-21T05:03:44Z","level":"info","msg":"backup completed","name":"backup-1","duration":"31.8s"}

@@ -1,0 +1,5 @@
+05:03:12 I -  reconciling backup
+05:03:12.480391 I -  fraction is kept as written
+07:03:12+02:00 I -  offset is kept as written
+05:03:44 I -  a zoneless timestamp still reads
+ W -  an unreadable time leaves the slot empty and survives as an extra  ts=STARTED

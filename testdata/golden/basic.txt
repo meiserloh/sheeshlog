@@ -1,0 +1,6 @@
+05:03:12.123456 I -  reconciling  attempt=2 name=backup-1
+05:03:12.500000 E -  backup failed  duration=1.5 err=boom
+05:03:13 I -  no level here
+05:03:14 D -  nested  Backup={"name":"backup-1","ns":"production"}
+not json at all
+05:03:15 W -  only slots

@@ -1,0 +1,6 @@
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 manager {"level":"info","ts":"2026-08-21T04:58:04Z","logger":"config","msg":"Starting in development mode! This is not recommended for production!"}
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 manager {"level":"info","ts":"2026-08-21T04:58:04Z","msg":"Starting EventSource","controller":"backup","controllerGroup":"example.com","controllerKind":"Backup","source":"kind source: *v1.Backup"}
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 manager {"level":"debug","ts":"2026-08-21T05:03:12Z","msg":"reconciling backup","controller":"backup","controllerKind":"Backup","Backup":{"name":"backup-20260821-0503","namespace":"production"},"namespace":"production","name":"backup-20260821-0503","reconcileID":"9f3c1b20"}
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 manager {"level":"info","ts":"2026-08-21T05:03:44Z","msg":"backup completed","Backup":{"name":"backup-20260821-0503"},"duration":"31.8s"}
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 manager {"level":"error","ts":"2026-08-21T05:04:02Z","msg":"restore failed","Restore":{"name":"restore-20260821-0504"},"error":"velero: timeout waiting for volume"}
+my-backup-operator-controller-manager-7c45d48bb4-cgkp2 default-schedule-cr CR 'nightly-schedule' already exists, skipping creation

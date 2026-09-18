@@ -1,0 +1,70 @@
+# An example profile for the Kubernetes operator log style: zap-style JSON with
+# a pod/container prefix from `kubectl logs --prefix`.
+#
+# sheesh wrote this file on its first run, as a profile that works and as the
+# thing to copy. The file name is the profile name, so this file is the profile
+# `operator`: copy it to <name>.yaml beside this one and edit the paths to match
+# your own service, then `sheesh use <name>`.
+#
+# It is written once and never again, so this copy is yours: edit it freely, or
+# delete it once you have your own.
+
+# How this stream's payload is decoded into fields. Omitted, as here, it is
+# `json`, which is what this profile reads and what nearly every profile should
+# say. The other value is `logfmt`, for a stream writing `key=value` pairs.
+#
+#   format: json
+
+# Dotted paths for the three fixed slots. A path that is missing, or that lands
+# on a non-object part way down, leaves its slot empty rather than erroring.
+time: ts
+level: level
+message: msg
+
+# How the time value is read. Omitted, as here, it is detected: RFC3339, epoch
+# seconds and epoch milliseconds are each recognised from the value itself, so
+# nearly every profile should say nothing at all.
+#
+# State it only when detection would have to guess — seconds and milliseconds
+# are told apart by magnitude, so a style logging times far from the present day
+# is the case that needs telling. One of: auto, rfc3339, epoch, epochmillis.
+#
+#   timeformat: epochmillis
+
+# Tried in order; the first one present fills the subject slot, so a Backup, a
+# Restore and a BackupSchedule line all show the thing they are about. When
+# none is present the slot renders as `-` and the columns stay aligned.
+subject:
+  - name
+  - Backup.name
+  - Restore.name
+  - BackupSchedule.name
+
+# The context fields: those whose value repeats on nearly every line, and so
+# distinguish nothing. These are top-level field names, not dotted paths.
+#
+# A field that already fills a slot above does not need listing — it is spoken
+# for either way. Only fields that would otherwise land in the extras belong
+# here. Anything not listed still shows up as a dimmed extra, which is how you
+# notice a field you did not anticipate, so a short list is safe, just noisier.
+context:
+  - logger
+  - controller
+  - controllerGroup
+  - controllerKind
+  - reconcileID
+  - namespace
+  - Backup
+  - Restore
+  - BackupSchedule
+
+# The noise rules: a line whose named field matches is discarded whole, whatever
+# its level. One shape only — a dotted-path field and a regex — so a rule can
+# name a nested field, or the stream prefix, exactly as a slot above can.
+#
+# These drop the startup chatter a fresh tail opens with, and the
+# controller-runtime library's own logging. A field a line does not have simply
+# does not match, so a rule costs nothing on the lines it was not written for.
+noise:
+  - {field: msg, matches: "^(Starting|Serving|Stopping|Shutdown|starting server|Wait completed)"}
+  - {field: logger, matches: "^controller-runtime"}

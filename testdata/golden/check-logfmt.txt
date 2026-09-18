@@ -1,0 +1,43 @@
+profile logfmt, threshold trace
+sample 10 lines: 3 passed through, 0 noise, 0 below trace, 7 rendered
+
+slots (of 7 lines reaching them)
+  time     time 7
+  level    level 7
+  message  msg 7
+  subject  name 2, _prefix 4  (1 empty)
+
+noise dropped
+  (no rules)
+
+context suppressed (of the same 7 lines)
+  controller       4
+  controllerGroup  1
+  controllerKind   1
+  reconcileID      1
+  namespace        2
+  logSource        2
+  source           2
+  App              2
+
+fields seen (of 7 lines parsed)
+  App                      2
+  _prefix                  4
+  backup-storage-location  2
+  cmd                      1
+  component                1
+  controller               4
+  controllerGroup          1
+  controllerKind           1
+  id                       1
+  level                    7
+  logSource                2
+  msg                      7
+  name                     2
+  namespace                2
+  new                      1
+  old                      1
+  plugin                   1
+  reconcileID              1
+  source                   2
+  time                     7
